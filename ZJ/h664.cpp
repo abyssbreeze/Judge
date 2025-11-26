@@ -26,10 +26,6 @@ int main()
     cin.tie(0); 
     ios::sync_with_stdio(false); 
     
-    // int n ;
-    // cin>>n ;
-    // h(n,'A','B','C') ;
-     
     int t ;
     int n , s ;
     
