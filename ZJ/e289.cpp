@@ -1,7 +1,8 @@
-//#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include<unordered_map>
 using namespace std;
 
 
@@ -18,7 +19,8 @@ int main()
     cin>>m>>n ;
     vector <string> v(n) , tmp ;
     vector <int> num(n) ;
-    int cnt [200000] = {0} ;
+    //int cnt [200000] = {0} ;
+    unordered_map <string , int> cnt ;
     int diff = 0 ;
     int ans  = 0 ;
 
@@ -26,26 +28,26 @@ int main()
     {
         cin >> v[i];
     }
-    tmp = v;
-    sort(tmp.begin(),tmp.end()) ;
+    // tmp = v;
+    // sort(tmp.begin(),tmp.end()) ;
+    // // for (int i = 0; i < n; i++)
+    // // {
+    // //     v[i] = lower_bound(tmp.begin(), tmp.end(), v[i]) - tmp.begin() ;
+    // // }
+    
     // for (int i = 0; i < n; i++)
     // {
     //     v[i] = lower_bound(tmp.begin(), tmp.end(), v[i]) - tmp.begin() ;
     // }
     
-    for (int i = 0; i < n; i++)
-    {
-        num[i] = lower_bound(tmp.begin(), tmp.end(), v[i]) - tmp.begin() ;
-    }
-    
 
     for (int i = 0; i < n; i++)
     {
-        if (!cnt[ num[i] ])
+        if (!cnt[ v[i] ])
         {
             diff++ ;            
         }
-        cnt[ num[i] ]++ ;
+        cnt[ v[i] ]++ ;
 
         if (i<m-1)
         {
@@ -58,8 +60,8 @@ int main()
             ans++;
         }
 
-        cnt[ num[i-m+1] ]-- ;
-        if (!cnt[ num[i-m+1] ])
+        cnt[ v[i-m+1] ]-- ;
+        if (!cnt[ v[i-m+1] ])
         {
             diff-- ;
         }
