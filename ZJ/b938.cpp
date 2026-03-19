@@ -1,3 +1,4 @@
+//解法一(array)
 #include<bits/stdc++.h> 
 #include<iostream>
 using namespace std;
@@ -50,4 +51,52 @@ int main() {
     }
     
     return 0 ;
+}
+
+//解法二(union-find)
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define io ios::sync_with_stdio(false); cin.tie(0)
+
+vector<int> parent;
+
+int find(int x){
+    if(parent[x] == x) return x;
+    return parent[x] = find(parent[x]); // 路徑壓縮
+}
+
+int main(){
+    io ;
+
+    int n, m;
+    cin >> n >> m;
+
+    parent.resize(n+2);
+    for(int i = 1; i <= n+1; i++){
+        parent[i] = i;
+    }
+
+    vector<bool> alive(n+2, true);
+
+    int k ;
+    for (int i = 0 ; i < m ; i++){
+        cin>>k ;
+        if (!alive[k]){
+            cout<<"0u0 ...... ?\n" ;
+            continue ;
+        }
+        int a = find(k+1) ;
+        if(a>n){
+            cout<<"0u0 ...... ?\n" ;
+            continue ;
+        }
+        cout<<a<<"\n" ;
+        alive[a] = false ;
+        parent[a] = a+1 ;
+    }
+    
+    return 0 ;
+
 }
