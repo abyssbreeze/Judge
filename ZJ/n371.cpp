@@ -50,4 +50,7 @@ int main(){
         alive[b] = false;
         parent[b] = b + 1; 
     }
+
+    return 0 ;
+    
 }
