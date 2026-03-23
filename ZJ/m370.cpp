@@ -7,24 +7,23 @@ int main() {
 
     int x,n;
     cin>>x>>n ;
-    int all_food[201]  = {0};
-    int food;
+    int all_food[201]  = {0} ;
+    int food ;
     int big = 0 , small = 0 ;
-    int biggest = -100 , smallest  = 100; 
-    for (int i = 0; i < n ; i++)
-    {
+    int biggest = -100 , smallest  = 100 ; 
+    for (int i = 0; i < n ; i++){
         cin>>food;
         all_food[i] = food ;
         if(food>x){
-            big++;
+            big++ ;
             if(food>biggest){
-                biggest  =food;
+                biggest  = food ;
             }
         }
         else if(food<x){
-            small++;
+            small++ ;
             if(food<smallest){
-                smallest = food;
+                smallest = food ;
             }
         }
     }
