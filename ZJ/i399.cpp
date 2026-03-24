@@ -2,16 +2,24 @@
 using namespace std;
 
 int main() {
-  int a, b, c, sum[10] = {0}, Max = 0;
-  cin >> a >> b >> c;
-  sum[a]++; sum[b]++; sum[c]++; 
-  
-  for(int i=1; i<=9; i++) Max = max(Max, sum[i]); 
-  cout << Max << ' ';
+    int a , b , c  ;
+    int A[10] = {0} ;
+    int ma = 0 ;
+    cin >> a >> b >> c;
+    A[a]++ ;
+    A[b]++ ;
+    A[c]++ ; 
+    
+    for(int i=1; i<=9; i++) ma = max(ma , A[i]) ; 
+    cout << ma << ' ' ;
 
-  for(int i=9; i>=1; i--){
-    if(sum[i] > 0) cout << i << ' ';
-  }
+    set<int>s ;
+    s.insert(a) ;
+    s.insert(b) ;
+    s.insert(c) ;
+    for(auto it = s.rbegin() ; it != s.rend() ; ++it){
+       cout<<*it<<' ' ; 
+    }
+  return 0 ;
   
-  return 0;
 }
