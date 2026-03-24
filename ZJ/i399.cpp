@@ -20,6 +20,6 @@ int main() {
     for(auto it = s.rbegin() ; it != s.rend() ; ++it){
        cout<<*it<<' ' ; 
     }
-  return 0 ;
+    return 0 ;
   
 }
