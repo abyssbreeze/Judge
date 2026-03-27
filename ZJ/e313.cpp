@@ -24,7 +24,7 @@ int main() {
             if (str[j]!=str[j-1]) cnt++ ;    
         }
             p[i].first = cnt ;
-        }
+    }
         
     sort(p,p+n) ;
     cout<<p[0].second ;
