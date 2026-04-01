@@ -10,9 +10,8 @@ int main() {
 
     int n , target ;
     int x , num1 , num2 ;
-    unordered_map<int,int> num ;
+    map<int,int> num ; // idex , value
     cin>>n>>target ;
-    num.reserve(n);
     for (int i = 1 ; i <= n; i++){
         cin>>x ;
         num2 = target - x ;
