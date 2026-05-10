@@ -42,8 +42,7 @@ int main() {
             d[a].right = tmp.top ;
         }
         else{
-            d[a] = d[b];
-            d[b] = tmp ;
+            swap(d[a], d[b]) ;
         }
     }
     for (int i = 1 ; i <= n ; i++){
