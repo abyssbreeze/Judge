@@ -28,7 +28,7 @@ int main() {
     }
     while (check){
         check = false ;
-        for (int i = 0 ; i < n; i++){
+        for (int i = 0 ; i < n ; i++){
             for (int j = 0 ; j < m ; j++){
                 if (num[i][j]==-1) continue ;
                 next = j+1 ;
