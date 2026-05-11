@@ -17,7 +17,7 @@ int main() {
         cin>>r>>c>>t>>x ;
         for (int j = 0 ; j < h ; j++){
             for (int k = 0 ; k < w ; k++){
-                if( (abs(r-j)+ abs(c-k)) <= t) canva[j][k] += x ;
+                if( (abs(r-j) + abs(c-k)) <= t) canva[j][k] += x ;
             }   
         }
     }
