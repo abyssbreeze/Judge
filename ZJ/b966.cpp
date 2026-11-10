@@ -65,7 +65,8 @@ int main() {
     for(int i = 1 ; i<n ; i++) {
         if(vec[i].first <= now_right) {
             now_right = max(now_right , vec[i].second) ;
-        } else {
+        } 
+        else {
             sum += now_right - now_left ;
             now_left = vec[i].first ;
             now_right = vec[i].second ;
