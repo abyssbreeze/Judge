@@ -34,7 +34,7 @@ int main() {
     return 0 ;
 }
 
-//2. 合併排序 O(nlogn)
+//2. 合併區間 O(nlogn)
 #include <bits/stdc++.h>
 using namespace std;
 
