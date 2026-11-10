@@ -29,7 +29,8 @@ int main() {
 
         if (it == tails.end()) {
             tails.push_back(y);
-        } else {
+        } 
+        else {
             *it = y;
         }
     }
