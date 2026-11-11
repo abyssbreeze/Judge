@@ -25,7 +25,7 @@ long long DF_expression(int size) {
 
     int half = size / 2;
     long long up_left  = DF_expression(half) ;
-    long long upr_ight = DF_expression(half) ;
+    long long up_right = DF_expression(half) ;
     long long down_left  = DF_expression(half) ;
     long long down_right = DF_expression(half) ;
 
